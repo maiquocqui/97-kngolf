@@ -1,0 +1,32 @@
+.news-page
+	padding: 60px 0
+	.news-list
+		.news-col
+			margin-bottom: 30px
+			figure
+				.news-img
+					display: block
+					img
+						width: 100%
+				figcaption
+					padding: 15px 0
+					time
+						display: block
+						+fs(14rem)
+						color: darken($white,40%)
+						margin-bottom: 5px
+						&:before
+							content: '\f073'
+							margin-right: 5px
+					.news-name
+						+fs(20rem)
+						line-height: 1.3
+						color: $white
+				&:hover
+					figcaption
+						.news-name
+							color: $yellow
+.news-detail
+	.content
+		+fs(20rem)
+		font-weight: 300

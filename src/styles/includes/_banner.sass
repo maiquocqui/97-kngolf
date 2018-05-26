@@ -1,0 +1,88 @@
+.home-banner
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		z-index: 5
+		+fs(0)
+		color: $white
+		text-shadow: 0px 3px 10px color-rgba($black,0.1)
+		&:before
+			content: ''
+			+fs(36rem)
+			+media-breakpoint-down(lg)
+				+fs(24rem)
+		&:hover
+			color: $pink
+	.slick-prev
+		left: 50px
+		+media-breakpoint-down(lg)
+			left: 15px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 50px
+		+media-breakpoint-down(lg)
+			right: 15px
+		&:before
+			content: '\f105'
+	.slick-dots
+		+pos(abs,null 0 20px 0)
+		text-align: center
+		+media-breakpoint-down(lg)
+			bottom: 10px
+		li
+			display: inline-block
+			width: 12px
+			height: 12px
+			+bor-rad(50px)
+			background: darken($white,15%)
+			+transition(all,0.5s)
+			cursor: pointer
+			box-shadow: 0px 3px 10px color-rgba($black,0.1)
+			+media-breakpoint-down(lg)
+				width: 10px
+				height: 10px
+			+ li
+				margin-left: 10px
+			button
+				display: none
+			&.slick-active
+				background: $yellow
+	.item
+		+pos(rel,null)
+		.banner-img
+			+pos(rel,null)
+			// &:before
+			// 	content: ''
+			// 	+pos(abs, 0 0 null 0)
+			// 	height: 200px
+			// 	background: linear-gradient($black,color-rgba($black,0))
+			// 	opacity: 0.1
+			// 	z-index: 1
+			img
+				+media-breakpoint-down(sm)
+					height: 250px
+					object-fit: cover
+		.banner-caption
+			+fs(44rem)
+			font-weight: 300
+			color: $white
+			text-align: center
+			+pos(abs, null 0 70px 0)
+			z-index: 2
+			text-shadow: 0px 3px 20px color-rgba($black,0.3)
+			+media-breakpoint-down(lg)
+				width: 800px
+				+fs(20rem)
+			+media-breakpoint-down(md)
+				width: 600px
+				+fs(18rem)
+			+media-breakpoint-down(sm)
+				width: 100%
+				padding: 0px 15px
+				+fs(16rem)
+
+.page-banner
+	.banner-img
+		img
+			width: 100%

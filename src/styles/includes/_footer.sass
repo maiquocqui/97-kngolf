@@ -1,0 +1,63 @@
+footer
+	background: $lblack
+	.footer-top
+		padding: 50px 0 20px
+	.footer-col
+		margin-bottom: 30px
+	.footer-title
+		+fs(18rem)
+		font-weight: 600
+		color: $white
+		text-transform: uppercase
+		margin-bottom: 20px
+		&:after
+			content: ''
+			display: block
+			width: 40px
+			height: 1px
+			margin-top: 5px
+			background: $yellow
+	.footer-link
+		a
+			display: block
+			+fs(16rem)
+			line-height: 1.8
+			color: darken($white,20%)
+			&:hover
+				color: $yellow
+	.footer-about
+		ul
+			li
+				display: block
+				+fs(16rem)
+				line-height: 1.8
+				color: darken($white,20%)
+				+pos(rel,null)
+				padding-left: 30px
+				.fa
+					color: $yellow
+					+pos(abs, 5px null null 0)
+				a
+					&:hover
+						color: $yellow
+	.footer-bottom
+		+flexbox
+		justify-content: space-between
+		align-items: center
+		height: 50px
+		border-top: 1px solid color-rgba($white,0.1)
+		.copyright
+			+fs(12rem)
+			color: color-rgba($white,0.3)
+			text-transform: uppercase
+		.social
+			+flexbox
+			align-items: center
+			align-content: center
+			a
+				color: color-rgba($white,0.3)
+				+fs(18rem)
+				+ a
+					margin-left: 30px
+				&:hover
+					color: $yellow

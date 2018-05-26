@@ -1,0 +1,98 @@
+.career-page
+	padding: 60px 0
+	.career-table
+		th, td
+			text-align: center
+			&:first-child
+				text-align: left
+		th
+			background: $black
+			color: $yellow
+			+fs(20rem)
+			font-weight: 600
+			text-transform: uppercase
+			line-height: 20px
+			padding: 20px
+		td
+			+fs(20rem)
+			line-height: 20px
+			padding: 20px
+			font-weight: 300
+			color: darken($white,40%)
+			.job-wrap
+				+flexbox
+				align-items: center
+				align-content: center
+			.number
+				+fs(24rem)
+				line-height: 20px
+				font-weight: 800
+				margin-right: 20px
+			a
+				line-height: 20px
+			&:hover
+				color: $yellow
+				a
+					font-weight: 700
+		tr
+			&:nth-child(odd)
+				background: darken($white,80%)
+	.career-detail
+		time
+			+fs(18rem)
+			font-weight: 300
+			color: darken($white,40%)
+			display: block
+			margin-top: -30px
+			margin-bottom: 30px
+			&:before
+				content: '\f073'
+				margin-right: 5px
+	.content
+		+fs(20rem)
+	.btn-download
+		+fs(18rem)
+		font-weight: 700
+		color: $red
+		display: block
+		margin-bottom: 20px
+		&:before
+			content: '\f019'
+			margin-right: 10px
+			+fs(24rem)
+			display: inline-block
+			vertical-align: middle
+	.btn-apply
+		&:after
+			display: none
+.other-job
+	padding: 60px 0
+	.module-title
+		+fs(20rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $yellow
+		background: darken($white,60%)
+		padding: 15px 30px
+		line-height: 20px
+	.job-list
+		.job
+			padding: 10px 30px
+			border-bottom: 1px solid darken($white,80%)
+			time
+				display: block
+				+fs(14rem)
+				line-height: 1
+				font-weight: 300
+				color: darken($white,40%)
+				margin-bottom: 10px
+				&:before
+					content: '\f073'
+					margin-right: 5px
+			.job-name
+				+fs(18rem)
+				font-weight: 300
+				color: darken($white,40%)
+			&:hover
+				.job-name
+					color: $yellow

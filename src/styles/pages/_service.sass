@@ -1,0 +1,87 @@
+.service-page
+	padding: 60px 0
+	.service-list
+		.service-item
+			margin-bottom: 130px
+			&:nth-child(even)
+				figure
+					.service-img
+						order: 2
+					figcaption
+						order: 1
+						padding-left: 0
+						padding-right: 70px
+			figure
+				+flexbox
+				align-items: center
+				align-content: center
+				.service-img
+					width: 970px
+					+pos(rel,null)
+					display: block
+					&:before
+						content: ''
+						+pos(abs, 50px 0 -50px 50px)
+						border: 10px solid color-rgba($white,0.1)
+					img
+						width: calc(100% - 50px)
+						+pos(rel,null)
+						z-index: 1
+				figcaption
+					width: calc(100% - 970px)
+					padding-left: 70px
+					.service-name
+						+fs(30rem)
+						font-weight: 600
+						text-transform: uppercase
+						color: $white
+						margin-bottom: 30px
+						&:after
+							content: ''
+							display: block
+							width: 120px
+							height: 3px
+							background: $yellow
+							margin-top: 5px
+					.service-des
+						+fs(20rem)
+						font-weight: 300
+						color: darken($white,40%)
+.service-form
+	margin-bottom: 80px
+	.content
+		+fs(20rem)
+		font-weight: 300
+		color: darken($white,40%)
+		margin-bottom: 50px
+		.title
+			+fs(36rem)
+			font-weight: 800
+			color: $yellow
+			text-transform: uppercase
+			margin: 20px 0
+			span
+				display: block
+				+fs(48rem)
+				text-align: right
+				color: $white
+				font-weight: 800
+				padding-right: 150px
+	.form-wrap
+	.module-title
+		+fs(24rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $white
+		margin-bottom: 10px
+	.form-img
+		+pos(rel,null)
+		display: block
+		&:before
+			content: ''
+			+pos(abs, 50px 0 -50px 50px)
+			border: 10px solid color-rgba($white,0.1)
+		img
+			width: calc(100% - 50px)
+			+pos(rel,null)
+			z-index: 1

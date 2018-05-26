@@ -1,0 +1,107 @@
+.home-title
+	+fs(40rem)
+	line-height: 1.3
+	font-weight: 300
+	margin-bottom: 30px
+	padding-left: 10px
+	+pos(rel,null)
+	&:before
+		content: ''
+		width: 1px
+		height: 80px
+		background: $yellow
+		+pos(abs, -60px null null 0)
+	span
+		font-weight: 300
+		margin-left: 70px
+		display: block
+
+.page-title
+	+fs(30rem)
+	font-weight: 300
+	text-transform: uppercase
+	color: $white
+	border-bottom: 2px solid $yellow
+	padding: 5px 0
+	margin-bottom: 30px
+
+.small-title
+	+fs(30rem)
+	font-weight: 300
+	text-transform: uppercase
+	color: $white
+	margin-bottom: 30px
+
+.home-about
+	padding: 60px 0
+	background: $white
+	.home-title
+		color: $main
+		&:before
+			background: $main
+	.about-content
+		.content
+			+fs(18rem)
+			font-weight: 300
+		.about-img
+
+.home-project
+	padding: 60px 0
+.home-intro
+	.title-wrap
+		+flexbox
+		justify-content: center
+	.intro-title
+		+fs(40rem)
+		line-height: 1.3
+		text-transform: uppercase
+		font-weight: 800
+		color: darken($white,60%)
+		margin-bottom: 50px
+		span
+			color: $yellow
+			+fs(30rem)
+			font-weight: 800
+			margin-left: 70px
+			display: block
+	.intro-list
+		background: $white
+		border-bottom: 2px solid $white
+		.row
+			margin: 0px -1px
+			.col-12
+				padding: 0px 1px
+		.intro-link
+			figure
+				height: 190px
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				background: $yellow
+				.icon
+				figcaption
+					padding-left: 30px
+					.name
+						+fs(16rem)
+						text-transform: uppercase
+						font-weight: 700
+						color: $white
+						margin-bottom: 10px
+					.link
+						display: inline-block
+						+fs(14rem)
+						font-weight: 300
+						text-transform: uppercase
+						width: 180px
+						+bor-rad(5px)
+						border: 1px solid $white
+						line-height: 38px
+						text-align: center
+						&:after
+							content: '\e87a'
+							font-family: 'Linearicons-Free'
+							margin-left: 10px
+						&:hover
+							background: $white
+							color: $yellow

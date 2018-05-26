@@ -1,0 +1,98 @@
+header
+	background: $black
+	+pos(abs, 0 0 null 0)
+	z-index: 1000
+	&.hide
+		+pos(fix, 0 0 null 0)
+		+transform(translateY(-100%))
+	&.minimal
+		+transform(translateY(0))
+		+transition(all,0.5s)
+		.sitelogo
+			+pos(static,unset)
+			+flexbox
+			justify-content: center
+			align-items: center
+			img
+				height: 80px
+	.header-wrap
+		+flexbox
+		justify-content: center
+		+pos(rel,null)
+	.sitelogo
+		+pos(abs, 110px null null 0)
+	.col-right
+		flex: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+		height: 80px
+	.menu
+		ul.menu-link
+			+flexbox
+			> li
+				+ li
+					margin-left: 50px
+				> a
+					display: block
+					+fs(16rem)
+					font-weight: 600
+					color: $white
+					line-height: 20px
+					text-transform: uppercase
+				&:hover
+					> a
+						color: $yellow
+				&.active
+					> a
+						color: $yellow
+	.language
+		margin-left: 50px
+		.dropdown-toggle
+			+fs(16rem)
+			text-transform: uppercase
+			color: $white
+			line-height: 1
+			&:after
+				content: '\f107'
+				border: none
+				width: auto
+				height: auto
+				display: inline-block
+				vertical-align: middle
+	.search
+		padding-left: 15px
+		margin-left: 15px
+		border-left: 1px solid $white
+		line-height: 1
+		+pos(rel,null)
+		.search-toggle
+			color: $white
+			line-height: 1
+			cursor: pointer
+			&.active
+				color: $yellow
+		.search-wrap
+			+pos(abs, 40px 0 null null)
+			display: none
+			.searchbox
+				+flexbox
+				align-items: center
+				align-content: center
+				+bor-rad(3px)
+				background: darken($white,80%)
+				color: darken($white,40%)
+				input
+					border: none
+					background: none
+					+fs(16rem)
+					line-height: 20px
+					color: $white
+					padding: 15px 20px
+					flex: auto
+				.searchbutton
+					color: $white
+					color: darken($white,40%)
+					line-height: 20px
+					padding: 15px 20px
