@@ -1,98 +1,99 @@
 header
-	background: $black
-	+pos(abs, 0 0 null 0)
+	background: $white
+	+pos(fix, 0 0 null 0)
 	z-index: 1000
-	&.hide
-		+pos(fix, 0 0 null 0)
-		+transform(translateY(-100%))
-	&.minimal
-		+transform(translateY(0))
-		+transition(all,0.5s)
-		.sitelogo
-			+pos(static,unset)
-			+flexbox
-			justify-content: center
-			align-items: center
-			img
-				height: 80px
 	.header-wrap
 		+flexbox
-		justify-content: center
-		+pos(rel,null)
 	.sitelogo
-		+pos(abs, 110px null null 0)
-	.col-right
-		flex: auto
+		height: 100px
 		+flexbox
 		align-items: center
 		align-content: center
-		justify-content: flex-end
-		height: 80px
+		padding-right: 40px
+	.col-right
+		flex: auto
+		+flexbox
+		flex-wrap: wrap
+		align-items: flex-start
+		align-content: flex-start
+		padding-top: 10px
 	.menu
+		flex: auto
+		margin-top: 10px
 		ul.menu-link
 			+flexbox
+			flex-wrap: wrap
 			> li
 				+ li
 					margin-left: 50px
 				> a
-					display: block
-					+fs(16rem)
-					font-weight: 600
-					color: $white
+					+fs(14rem)
 					line-height: 20px
-					text-transform: uppercase
-				&:hover
+					color: $main
+					padding: 10px 0
+				&:hover, &.active
 					> a
-						color: $yellow
-				&.active
-					> a
-						color: $yellow
-	.language
-		margin-left: 50px
-		.dropdown-toggle
-			+fs(16rem)
+						color: $green
+						font-weight: 700
+	.logo2
+		a
+			display: block
+	.header-tool
+		width: 100%
+		border-top: 1px solid $main
+		+flexbox
+		align-items: center
+		align-content: center
+		padding-top: 5px
+	.tool-right
+		flex: auto
+		+flexbox
+		justify-content: flex-end
+		align-items: center
+		align-content: center
+	.online-booking
+		.btn-book
+			+fs(13rem)
 			text-transform: uppercase
-			color: $white
-			line-height: 1
-			&:after
-				content: '\f107'
-				border: none
-				width: auto
-				height: auto
-				display: inline-block
-				vertical-align: middle
-	.search
-		padding-left: 15px
+			color: #bdaeff
+			&:hover
+				color: $green
+				font-weight: 600
+	.social
+		+flexbox
+		align-items: center
+		align-content: center
+		a
+			+ a
+				margin-left: 5px
+			.fa
+				display: block
+				width: 30px
+				height: 30px
+				color: $white
+				line-height: 30px
+				text-align: center
+				+bor-rad(50px)
+				&.fa-facebook
+					background: $facebook
+				&.fa-twitter
+					background: $twitter
+				&.fa-instagram
+					background: linear-gradient(135deg, #dd4972 0%, #fdcf77 100%)
+	.language
 		margin-left: 15px
-		border-left: 1px solid $white
-		line-height: 1
-		+pos(rel,null)
-		.search-toggle
-			color: $white
+		a
+			color: $main
+			+fs(13rem)
 			line-height: 1
-			cursor: pointer
-			&.active
-				color: $yellow
-		.search-wrap
-			+pos(abs, 40px 0 null null)
-			display: none
-			.searchbox
-				+flexbox
-				align-items: center
-				align-content: center
-				+bor-rad(3px)
-				background: darken($white,80%)
-				color: darken($white,40%)
-				input
-					border: none
-					background: none
-					+fs(16rem)
-					line-height: 20px
-					color: $white
-					padding: 15px 20px
-					flex: auto
-				.searchbutton
-					color: $white
-					color: darken($white,40%)
-					line-height: 20px
-					padding: 15px 20px
+			text-transform: uppercase
+			+ a
+				padding-left: 10px
+				margin-left: 10px
+				border-left: 1px solid darken($white,10%)
+			&:hover, &.active
+				color: $green
+				font-weight: 600
+					
+
+	
